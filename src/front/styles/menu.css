@@ -14,7 +14,7 @@
 .summary h2 {
     font-size: 2rem;
     margin-top: 0;
-    color:rgb(26, 26, 56)
+    color:rgb(30, 30, 141)
   }
   .meal {
     display: flex;
@@ -36,7 +36,7 @@
     margin-top: 0.25rem;
     font-weight: bold;
     color: rgb(253, 130, 82);
-    font-size: 1.25rem;
+    font-size: 0.8rem;
   }
   .meals {
     max-width: 60rem;
@@ -75,4 +75,7 @@
     border-radius: 50%;
    
     
+}
+.card h2 {
+  color: rgb(16, 16, 47)
 }

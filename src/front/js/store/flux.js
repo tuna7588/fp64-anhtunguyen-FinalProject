@@ -3,95 +3,99 @@
 const getState = ({ getStore, getActions, setStore }) => {
     return {
         store: {
+            
+                menu: [
+                    {
+                        id: "1",
+                        name: "Spring Rolls",
+                        description: "Crispy and delicious",
+                        price: 5.99,
+                        category: "starter",
+                        image: 'https://saltedmint.com/wp-content/uploads/2024/01/Vegetable-Spring-Rolls-4.jpg'
+                    },
+                    {
+                        id: "2",
+                        name: "Soup",
+                        description: "Warm and comforting",
+                        price: 4.99,
+                        category: "starter",
+                        image: 'https://images.immediate.co.uk/production/volatile/sites/2/2016/08/25097.jpg?quality=90&crop=2px,151px,596px,542px&resize=556,505'
+                    },
+                    {
+                        id: "3",
+                        name: "Hamburger",
+                        description: "The Classic Burger",
+                        price: 12.99,
+                        category: "main",
+                        image: 'hamburger.jpeg'
+                    },
+                    {
+                        id: "4",
+                        name: "Fried Chicken",
+                        description: "Special crispy chicken",
+                        price: 10.5,
+                        category: "main",
+                        image: 'fried-chicken.jpeg'
+                    },
+                    {
+                        id: "5",
+                        name: "Barbecue Burger",
+                        description: "American, raw, meaty",
+                        price: 12.99,
+                        category: "main",
+                        image: 'barbecue-hamburger.jpeg'
+                    },
+                    {
+                        id: "6",
+                        name: "Green Bowl",
+                        description: "Healthy...and green...",
+                        price: 8.99,
+                        category: "main",
+                        image: 'greenbowl.png'
+                    },
+                    {
+                        id: "7",
+                        name: "Chocolate Cake",
+                        description: "Rich and creamy",
+                        price: 6.99,
+                        category: "dessert"},
+                    {
+                        id: "8",
+                        name: "Cheesecake",
+                        description: "Smooth and tasty",
+                        price: 7.99,
+                        category: "dessert",
+                    },
+                    {
+                        id: "9",
+                        name: "Ice Cream",
+                        description: "Chocolate, Strawberry, Vanilla",
+                        price: 4.99,
+                        category: "dessert",
+                    },
+                    {
+                        id: "10",
+                        name: "Water",
+                        price: 1.99,
+                        category: "drink"
+                    },
+                    {
+                        id: "11",
+                        name: "Coke",
+                        price: 1.99,
+                        category: "drink"
+                    },
+                    {
+                        id: "12",
+                        name: "Beer",
+                        price: 1.99,
+                        category: "drink"
+                    }
+                ],
+              
+            
 
-            menu: [
-                {
-                    id: "1",
-                    name: "Spring Rolls",
-                    description: "Crispy and delicious",
-                    price: 5.99,
-                    category: "starter",
-                    image: 'https://saltedmint.com/wp-content/uploads/2024/01/Vegetable-Spring-Rolls-4.jpg'
-                },
-                {
-                    id: "2",
-                    name: "Soup",
-                    description: "Warm and comforting",
-                    price: 4.99,
-                    category: "starter",
-                    image: 'https://images.immediate.co.uk/production/volatile/sites/2/2016/08/25097.jpg?quality=90&crop=2px,151px,596px,542px&resize=556,505'
-                },
-                {
-                    id: "3",
-                    name: "Hamburger",
-                    description: "The Classic Burger",
-                    price: 12.99,
-                    category: "main",
-                    image: 'hamburger.jpeg'
-                },
-                {
-                    id: "4",
-                    name: "Fried Chicken",
-                    description: "Special crispy chicken",
-                    price: 10.5,
-                    category: "main",
-                    image: 'fried-chicken.jpeg'
-                },
-                {
-                    id: "5",
-                    name: "Barbecue Burger",
-                    description: "American, raw, meaty",
-                    price: 12.99,
-                    category: "main",
-                    image: 'barbecue-hamburger.jpeg'
-                },
-                {
-                    id: "6",
-                    name: "Green Bowl",
-                    description: "Healthy...and green...",
-                    price: 8.99,
-                    category: "main",
-                    image: 'greenbowl.png'
-                },
-                {
-                    id: "7",
-                    name: "Chocolate Cake",
-                    description: "Rich and creamy",
-                    price: 6.99,
-                    category: "dessert"},
-                {
-                    id: "8",
-                    name: "Cheesecake",
-                    description: "Smooth and tasty",
-                    price: 7.99,
-                    category: "dessert",
-                },
-                {
-                    id: "9",
-                    name: "Ice Cream",
-                    description: "Chocolate, Strawberry, Vanilla",
-                    price: 4.99,
-                    category: "dessert",
-                },
-                {
-                    id: "10",
-                    name: "Water",
-                    price: 1.99,
-                    category: "drink"
-                },
-                {
-                    id: "11",
-                    name: "Coke",
-                    price: 1.99,
-                    category: "drink"
-                },
-                {
-                    id: "12",
-                    name: "Beer",
-                    price: 1.99,
-                    category: "drink"
-                }
-            ],
+            
             cart: [],
             totalAmount: 0
         },

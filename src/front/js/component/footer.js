@@ -5,7 +5,7 @@ export const Footer = () => (
 	<footer className="footer-container">
 	
         
-        <p>&copy; 2024 Your Restaurant Name. All rights reserved. <a href="/about-us">About us</a></p>
+        <p>&copy; 2024 All rights reserved. App designed by <a href="/about-us"><b>AJRM</b></a></p>
        
 	</footer>
 );
