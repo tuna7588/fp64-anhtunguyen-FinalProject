@@ -9,14 +9,14 @@ import { AddForm } from "../component/AddForm";
 export const Menu = (props) => {
 	const { store, actions } = useContext(Context);
 	const starters = store.menu.filter(item => item.category === 'starter');
-    const mains = store.menu.filter(item => item.category === 'main');
+	const mains = store.menu.filter(item => item.category === 'main');
 	const desserts = store.menu.filter(item => item.category === 'dessert');
 	const drinks = store.menu.filter(item => item.category === 'drink');
 	useEffect(() => {
 		actions.getMenu()
 	}, [])
-	
-	
+
+
 	return (
 		<>
 			<Navbar />
@@ -25,19 +25,19 @@ export const Menu = (props) => {
 					<h2>Starters</h2>
 					<ul>{starters.map((meal) => (
 						<li className='meal'>
-							
+
 							<div>
 								<h5>{meal.name}</h5>
 								<div className='description'>{meal.description}</div>
 								<div className='price'>${meal.price}</div>
 							</div>
-							{/* <img src={meal.image} alt={meal.name} className='meal-image' /> */}
+							<img src={meal.image} alt={meal.name} className='meal-image' />
 							<div>
-							<AddForm 
-                                    id={meal.id}
-                                    name={meal.name}
-                                    price={meal.price}
-                                />
+								<AddForm
+									id={meal.id}
+									name={meal.name}
+									price={meal.price}
+								/>
 							</div>
 						</li>
 					))}</ul>
@@ -50,11 +50,11 @@ export const Menu = (props) => {
 								<div className='price'>${meal.price}</div>
 							</div>
 							<div>
-							<AddForm 
-                                    id={meal.id}
-                                    name={meal.name}
-                                    price={meal.price}
-                                />
+								<AddForm
+									id={meal.id}
+									name={meal.name}
+									price={meal.price}
+								/>
 							</div>
 						</li>
 					))}</ul>
@@ -67,11 +67,11 @@ export const Menu = (props) => {
 								<div className='price'>${meal.price}</div>
 							</div>
 							<div>
-							<AddForm 
-                                    id={meal.id}
-                                    name={meal.name}
-                                    price={meal.price}
-                                />
+								<AddForm
+									id={meal.id}
+									name={meal.name}
+									price={meal.price}
+								/>
 							</div>
 						</li>
 					))}</ul>
@@ -84,11 +84,11 @@ export const Menu = (props) => {
 								<div className='price'>${meal.price}</div>
 							</div>
 							<div>
-							<AddForm 
-                                    id={meal.id}
-                                    name={meal.name}
-                                    price={meal.price}
-                                />
+								<AddForm
+									id={meal.id}
+									name={meal.name}
+									price={meal.price}
+								/>
 							</div>
 						</li>
 					))}</ul>
@@ -96,6 +96,6 @@ export const Menu = (props) => {
 			</section>
 			<Footer />
 		</>
-		
+
 	);
 };
