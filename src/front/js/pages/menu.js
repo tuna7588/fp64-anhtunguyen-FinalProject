@@ -49,6 +49,7 @@ export const Menu = (props) => {
 								<div className='description'>{meal.description}</div>
 								<div className='price'>${meal.price}</div>
 							</div>
+							<img src={meal.image} alt={meal.name} className='meal-image' />
 							<div>
 								<AddForm
 									id={meal.id}
@@ -63,9 +64,10 @@ export const Menu = (props) => {
 						<li className='meal'>
 							<div>
 								<h5>{meal.name}</h5>
-								{/* <div className='description'>{meal.description}</div> */}
+								<div className='description'>{meal.description}</div>
 								<div className='price'>${meal.price}</div>
 							</div>
+							<img src={meal.image} alt={meal.name} className='meal-image' />
 							<div>
 								<AddForm
 									id={meal.id}
