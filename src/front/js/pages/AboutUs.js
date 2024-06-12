@@ -4,7 +4,7 @@ import React from "react";
 
 import Fondo from "../../img/orange.png";
 import Melisa from "../../img/Melisa.jpg"
-import Rocio from "../../img/Rocio.jpg"
+import Rocio from "../../img/Rocio.jpeg"
 import Jordi from "../../img/Jordi.jpg"
 import AnhTu from "../../img/Anh-Tu.jpg"
 import "../../styles/AboutUs.css";;

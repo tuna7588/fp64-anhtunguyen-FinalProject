@@ -23,27 +23,27 @@ const getState = ({ getStore, getActions, setStore }) => {
                 },
                 {
                     id: "3",
-                    name: "Hamburger",
-                    description: "The Classic Burger... ",
+                    name: "Pho",
+                    description: "Vietnamese traditional ",
                     price: 12.99,
                     category: "main",
-                    image: 'https://www.thecookierookie.com/wp-content/uploads/2023/04/featured-stovetop-burgers-recipe.jpg'
+                    image: 'https://www.recipetineats.com/wp-content/uploads/2019/04/Beef-Pho_6.jpg'
                 },
                 {
                     id: "4",
                     name: "Fried Chicken",
-                    description: "Special crispy chicken",
+                    description: "Korean crispy chicken",
                     price: 10.5,
                     category: "main",
                     image: 'https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/DA2CE7B2-213D-47CD-BC65-8746BF251207/Derivates/ac919776-333a-491f-adeb-f584db66502f.jpg'
                 },
                 {
                     id: "5",
-                    name: "Barbecue Burger",
-                    description: "American, raw, meaty",
+                    name: "Baos",
+                    description: "Chinese steamed bun",
                     price: 12.99,
                     category: "main",
-                    image: 'https://images.radio-canada.ca/v1/alimentation/recette/4x3/burger-jamaicaine.jpg'
+                    image: 'https://vidamasfacilclub.com/wp-content/uploads/2021/04/receta-de-pan-gua-bao.jpg'
                 },
                 {
                     id: "6",
