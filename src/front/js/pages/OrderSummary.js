@@ -44,11 +44,12 @@ export const OrderSummary = props => {
                         <li key={index}>
                             <div>{meal.name}</div>
                             <div>x {meal.quantity}</div>
-                            <div>${(meal.price * meal.quantity).toFixed(2)}</div>
                             <div className="butt">
                                 <button className="butt1" onClick={(e) => actions.removeFromCart(meal.id)}>−</button>
                                 <button className="butt1" onClick={(e) => actions.addToCart(meal)}>+</button>
                             </div>
+                            <div>${(meal.price * meal.quantity).toFixed(2)}</div>
+                            
                         </li>
                     ))}
                 </ul>

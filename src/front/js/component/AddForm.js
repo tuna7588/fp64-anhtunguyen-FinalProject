@@ -1,18 +1,18 @@
-import React,{ useContext, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import "../../styles/AddForm.css";
 import { Context } from '../store/appContext';
 
 
 export const AddForm = (props) => {
     const [amountIsValid, setAmountIsValid] = useState(true);
-    const [enteredAmount, setEnteredAmount] = useState('0');
+    // const [enteredAmount, setEnteredAmount] = useState('0');
     const { store, actions } = useContext(Context);
 
     const submitHandler = (event) => {
         event.preventDefault();
-        const enteredAmountNumber = +enteredAmount;
-
-        if (enteredAmount.trim().length === 0 || enteredAmountNumber < 1 || enteredAmountNumber > 10) {
+        // const enteredAmountNumber = +enteredAmount;
+        const enteredAmountNumber = 1;
+        if (enteredAmountNumber < 1 || enteredAmountNumber > 10) {
             setAmountIsValid(false);
             return;
         }
@@ -24,7 +24,7 @@ export const AddForm = (props) => {
             quantity: enteredAmountNumber
         };
 
-        actions.addToCart(meal,enteredAmountNumber);
+        actions.addToCart(meal, enteredAmountNumber);
         setEnteredAmount('0');
     };
 
@@ -35,34 +35,24 @@ export const AddForm = (props) => {
         }
     };
 
-    const Input = (props) => {
-        const { label, input } = props;
 
-        return (
-            <div className='input'>
-                <label htmlFor={input.id}>{label}</label>
-                <input {...input} />
-            </div>
-        );
-    };
+    // const Input = (props) => {
+    //     const { label, input } = props;
+
+    //     return (
+    //         <div className='input'>
+    //             <label htmlFor={input.id}>{label}</label>
+    //             <input {...input} />
+    //         </div>
+    //     );
+    // };
 
     return (
+
         <form className='form' onSubmit={submitHandler}>
-            <Input
-                label='Quantity'
-                input={{
-                    id: props.id,
-                    type: 'number',
-                    min: '1',
-                    max: '10',
-                    step: '1',
-                    value: enteredAmount,
-                    onChange: inputChangeHandler
-                }}
-            />
-            <button type="submit">+ Add</button>
-            {!amountIsValid && <p>Please enter a valid amount (1-10).</p>}
+            <button type="submit" className='add-button'><i class="fa-solid fa-circle-plus"></i></button>
         </form>
+
     );
 }
 

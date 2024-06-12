@@ -25,7 +25,7 @@ export const Navbar = ({onClose}) => {
 										{store.cart.map((meal, id) => {
 											return <li className="dropdown-item cart-item" key={id}>
 												<div className="cart-item-details">
-													<h5 className='name'>{meal.name}</h5>
+													<p className='cart-name'>{meal.name}</p>
 													<div className="cart-item-summary">
 														<span className='quantity'>x {meal.quantity}</span>
 														<span className='price'>${meal.price.toFixed(2)}</span>

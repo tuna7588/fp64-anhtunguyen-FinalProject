@@ -29,7 +29,7 @@
 
 @media screen and (max-width: 600px) {
   .header h1 {
-      font-size: 12px;
+    font-size: 12px;
   }
 }
 
@@ -78,26 +78,26 @@
 
 @keyframes bump {
   0% {
-      transform: scale(1);
+    transform: scale(1);
   }
   10% {
-      transform: scale(0.9);
+    transform: scale(0.9);
   }
   30% {
-      transform: scale(1.1);
+    transform: scale(1.1);
   }
   50% {
-      transform: scale(1.15);
+    transform: scale(1.15);
   }
   100% {
-      transform: scale(1);
+    transform: scale(1);
   }
 }
 
 @media screen and (max-width: 600px) {
   .button {
-      margin-right: 45px;
-      max-width: 250px;
+    margin-right: 45px;
+    max-width: 250px;
   }
 }
 
@@ -119,10 +119,7 @@
   top: 100%;
   right: 0;
   width: 300px;
-
-} 
-
-
+}
 
 .cart-content {
   background-color: white;
@@ -133,17 +130,17 @@
 }
 
 .cart-items {
-  padding: 0;
+  padding: 1rem;
   list-style: none;
-  max-height: 300px;
-  overflow-y: auto;
+  max-height: 600px;
+  /* overflow-y: auto; */
 }
 
 .cart-item {
-  display: flex;
+  display: inline-block;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px;
+  /* align-items: center;
+  padding: 10px; */
   border-bottom: 1px solid #ddd;
 }
 
@@ -152,30 +149,34 @@
 }
 
 .cart-item-details {
-  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
 }
 
-.cart-item-details h5 {
+/* .cart-item-details h5 {
   margin: 0;
   font-size: 1.25em;
-}
+} */
 
 .cart-item-summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 5px;
+  width: 30%;
 }
 
 .cart-item-summary .price {
   color: rgb(253, 130, 82);
   font-weight: bold;
+  margin-left: 10px;
 }
 
 .cart-item-summary .quantity {
-  margin-left: 10px;
+  margin-left: 30px;
   background-color: #f1f1f1;
-  padding: 2px 6px;
+  padding: 2px 11px;
   border-radius: 5px;
 }
 
@@ -201,11 +202,12 @@
 .cart-actions {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
-  border-top: 1px solid #ddd;
+  /* padding: 17px;
+  border-top: 1px solid #ddd; */
 }
 
-.butt-close, .butt-order {
+.butt-close,
+.butt-order {
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 1em;
