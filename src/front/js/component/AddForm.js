@@ -25,7 +25,7 @@ export const AddForm = (props) => {
         };
 
         actions.addToCart(meal, enteredAmountNumber);
-        setEnteredAmount('0');
+        // setEnteredAmount('0');
     };
 
     const inputChangeHandler = (event) => {

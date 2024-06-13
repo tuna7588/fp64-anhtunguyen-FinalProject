@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useContext} from "react";
+import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
-import { Link, useParams,useNavigate } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { Navbar } from "../component/navbar";
 import { Footer } from "../component/footer";
@@ -45,9 +45,11 @@ export const OrderSummary = props => {
                             <div>{meal.name}</div>
                             <div>x {meal.quantity}</div>
                             <div className="butt">
+                                <button className='trash-icon' onClick={(e) => actions.removeItem(meal.id)}><i class="fa-solid fa-trash" ></i></button>
                                 <button className="butt1" onClick={(e) => actions.removeFromCart(meal.id)}>−</button>
                                 <button className="butt1" onClick={(e) => actions.addToCart(meal)}>+</button>
                             </div>
+                            
                             <div>${(meal.price * meal.quantity).toFixed(2)}</div>
                             
                         </li>

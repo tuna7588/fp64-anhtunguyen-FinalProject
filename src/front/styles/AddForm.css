@@ -18,3 +18,11 @@
   background-color: rgb(247, 112, 59);
   border-color: rgb(250, 123, 72);
 }
+@media screen and (max-width: 600px){
+  .add-button {
+    margin-left: 0; 
+    margin-top: 1rem; 
+    text-align: right; 
+  }
+}
+

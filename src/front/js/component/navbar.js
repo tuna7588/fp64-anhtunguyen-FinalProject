@@ -11,7 +11,7 @@ export const Navbar = ({onClose}) => {
 	return (
 		<>
 			<header className='nav-bar header'>
-				<h1>Menu</h1>
+				<h1>Restaurant</h1>
 				<div className='cart-container'>
 					<button className="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						Cart {store.cart.length}
@@ -63,7 +63,7 @@ export const Navbar = ({onClose}) => {
 
 			</header>
 			<div className='main-image'>
-				<img src='https://www.amc.info/fileadmin/_processed_/1/c/csm_Article_15_Header_wok_Asian_spices_2e5ac9f99e.jpg' />
+				<img src='https://res.cloudinary.com/dpujdteiu/image/upload/v1718235779/food_nx9k9j.jpg' />
 			</div>
 		</>
 
