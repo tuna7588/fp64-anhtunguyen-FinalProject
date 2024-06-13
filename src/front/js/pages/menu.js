@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Navbar } from "../component/navbar";
 import { Footer } from "../component/footer";
 import { Context } from "../store/appContext";
@@ -103,6 +103,7 @@ import { AddForm } from "../component/AddForm";
 
 // 	);
 // };
+
 const MenuItem = ({ meal }) => (
 	<li className='meal'>
 	  <img src={meal.image} alt={meal.name} className='meal-image' />
@@ -138,6 +139,25 @@ const MenuItem = ({ meal }) => (
   
   export const Menu = () => {
 	const { store, actions } = useContext(Context);
+	const { id } = useParams();
+	const [menuItems, setMenuItems] = useState([]);
+	useEffect(() => {
+		
+		fetchMenuItems(id); 
+	  }, [id]);
+	
+	  const fetchMenuItems = async (id) => {
+		try {
+		  const response = await fetch(`/api/menu/${id}`);
+		  if (!response.ok) {
+			throw new Error('Failed to fetch menu items');
+		  }
+		  const data = await response.json();
+		  setMenuItems(data); 
+		} catch (error) {
+		  console.error('Error fetching menu items:', error);
+		}
+	  };
 	useEffect(() => {
 	  actions.getMenu();
 	}, []);

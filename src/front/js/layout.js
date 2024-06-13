@@ -30,7 +30,7 @@ const Layout = () => {
                     {/* <Navbar /> */}
                     <Routes>
                         <Route element={<Home />} path="/" />
-                        <Route element={<Menu />} path="/menu" />
+                        <Route element={<Menu />} path="/menu/:id" />
                         <Route element={<OrderSummary />} path="/order-summary" />
                         <Route element={<OrderSuccess />} path="/order-success" />
                         <Route element={<AboutUs />} path="/about-us" />
