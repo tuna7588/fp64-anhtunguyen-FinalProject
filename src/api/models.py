@@ -30,7 +30,20 @@ class Restaurant(db.Model):
             "id": self.id,
             "name": self.name,
         }
-        
+
+class Table(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    restaurant_id = db.Column(db.Integer, db.ForeignKey('restaurant.id'), nullable=False)
+    number = db.Column(db.String(50), nullable=False)
+
+    restaurant = db.relationship('Restaurant', backref=db.backref('tables', lazy=True))
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "restaurant_id": self.restaurant_id,
+            "number": self.number
+        }        
 class Menu(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)

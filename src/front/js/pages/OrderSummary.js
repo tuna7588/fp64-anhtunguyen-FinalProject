@@ -18,8 +18,8 @@ export const OrderSummary = props => {
         setComment(e.target.value);
     };
 
-    const handlePaymentMethodChange = (e) => {
-        setPaymentMethod(e.target.value);
+    const handlePaymentMethodChange = (method) => {
+        setPaymentMethod(method);
     };
     const handleFinishOrder = () => {
         if (!paymentMethod) {
@@ -66,27 +66,32 @@ export const OrderSummary = props => {
 
                 <div className="payment-method">
                     <label htmlFor="payment">Payment Method:</label>
-                    <select id="payment" value={paymentMethod} onChange={handlePaymentMethodChange}>
+                    {/* <select id="payment" value={paymentMethod} onChange={handlePaymentMethodChange}>
                         <option value="">Select Payment Method</option>
                         <option value="credit">Credit Card</option>
                         <option value="debit">Debit Card</option>
                         <option value="paypal">PayPal</option>
                         <option value="cash">Pay at Cashier</option>
-                    </select>
+                    </select> */}
+                    <div className="payment-icons">
+                        <button className={paymentMethod === 'credit' ? 'selected' : ''} onClick={() => handlePaymentMethodChange('credit')}>
+                        <i class="fa-solid fa-credit-card"></i> Credit Card
+                        </button>
+                        <button className={paymentMethod === 'debit' ? 'selected' : ''} onClick={() => handlePaymentMethodChange('debit')}>
+                        <i class="fa-solid fa-building-columns"></i> Debit Card
+                        </button>
+                        <button className={paymentMethod === 'paypal' ? 'selected' : ''} onClick={() => handlePaymentMethodChange('paypal')}>
+                        <i class="fa-brands fa-paypal"></i> PayPal
+                        </button>
+                        <button className={paymentMethod === 'cash' ? 'selected' : ''} onClick={() => handlePaymentMethodChange('cash')}>
+                        <i class="fa-solid fa-money-bill"></i> Pay at Cashier
+                        </button>
+                    </div>
                 </div>
                 <div className='order-finish'>
                     <button onClick={actions.clearCart} className='button1'>Clear Order</button>
                     <button className='button1' onClick={handleFinishOrder}>Finish order</button>
                 </div>
-                {/* {showSuccessMessage && (
-                    <div className="success-message">
-                        Your order has been placed successfully!
-                    </div>
-                )}
-                <br></br>
-                <Link to="/menu">
-                    <button className='button1'>Back to Menu</button>
-                </Link> */}
             </div>
             <Footer />
         </>

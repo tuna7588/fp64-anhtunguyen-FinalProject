@@ -139,11 +139,11 @@ const MenuItem = ({ meal }) => (
   
   export const Menu = () => {
 	const { store, actions } = useContext(Context);
-	const { id } = useParams();
+	const { restaurantId, tableId } = useParams();
 
 	useEffect(() => {
-	  actions.getMenu(id);
-	}, [id]);
+	  actions.getMenu(restaurantId,tableId);
+	}, [restaurantId,tableId]);
   
 	const starters = store.menu.filter(item => item.category === 'starter');
 	const mains = store.menu.filter(item => item.category === 'main');

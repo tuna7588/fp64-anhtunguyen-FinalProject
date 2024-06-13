@@ -18,7 +18,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-  margin-right: -110px;
+  margin-right: -45px;
 }
 
 .order-summary li div {
@@ -141,6 +141,18 @@
 
 .trash-icon:hover {
   color: red;
+}
+.payment-icons button {
+  margin: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+}
+
+.payment-icons button.selected {
+  border-color: #007bff;
+  background-color: #e7f3ff;
 }
 
 @media (max-width: 600px) {

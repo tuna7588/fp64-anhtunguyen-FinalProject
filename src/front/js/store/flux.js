@@ -9,9 +9,9 @@ const getState = ({ getStore, getActions, setStore }) => {
         },
         actions: {
             // Use getActions to call a function within a fuction
-            getMenu: (restaurantId) => {
+            getMenu: (restaurantId,tableId) => {
                 const store = getStore()
-                fetch(`https://crispy-lamp-699prjjxqvj4cx4w9-3001.app.github.dev/api/restaurants/${restaurantId}/menu`)
+                fetch(`https://crispy-lamp-699prjjxqvj4cx4w9-3001.app.github.dev/api/restaurants/${restaurantId}/tables/${tableId}/menu`)
                     .then(response => response.json())
                     .then(data => {
                         setStore({ ...store, menu: data });
