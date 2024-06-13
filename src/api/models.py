@@ -17,3 +17,40 @@ class User(db.Model):
             "email": self.email,
             # do not serialize the password, its a security breach
         }
+    
+class Restaurant(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    menus = db.relationship('Menu', backref='restaurant', lazy=True)
+
+    def __repr__(self):
+        return f'<Restaurant {self.name}>'
+    def serialize(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+        }
+        
+class Menu(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    description = db.Column(db.Text, nullable=True)
+    price = db.Column(db.Float, nullable=False)
+    category = db.Column(db.String(50), nullable=False)
+    image = db.Column(db.String(255), nullable=True)
+    restaurant_id = db.Column(db.Integer, db.ForeignKey('restaurant.id'), nullable=False)
+
+    def __repr__(self):
+        return f'<Menu {self.name}>'
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "description": self.description,
+            "price": self.price,
+            "category": self.category,
+            "image": self.image,
+            "restaurant_id": self.restaurant_id
+        }
+    
