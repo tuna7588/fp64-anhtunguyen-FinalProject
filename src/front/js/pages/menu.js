@@ -140,27 +140,10 @@ const MenuItem = ({ meal }) => (
   export const Menu = () => {
 	const { store, actions } = useContext(Context);
 	const { id } = useParams();
-	const [menuItems, setMenuItems] = useState([]);
+
 	useEffect(() => {
-		
-		fetchMenuItems(id); 
-	  }, [id]);
-	
-	  const fetchMenuItems = async (id) => {
-		try {
-		  const response = await fetch(`/api/menu/${id}`);
-		  if (!response.ok) {
-			throw new Error('Failed to fetch menu items');
-		  }
-		  const data = await response.json();
-		  setMenuItems(data); 
-		} catch (error) {
-		  console.error('Error fetching menu items:', error);
-		}
-	  };
-	useEffect(() => {
-	  actions.getMenu();
-	}, []);
+	  actions.getMenu(id);
+	}, [id]);
   
 	const starters = store.menu.filter(item => item.category === 'starter');
 	const mains = store.menu.filter(item => item.category === 'main');
